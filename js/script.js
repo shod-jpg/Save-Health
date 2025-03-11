@@ -16,8 +16,8 @@ const arrayOfHealthTips = [
     for (let i = 0; i < countOfPills; i++) {
       const pill = document.createElement("span");
       pill.textContent = "💊"; 
-      pill.style.fontSize = "30px";
-      pill.style.marginRight = "5px";
+      pill.style.fontSize = "15px";
+      pill.style.marginRight = "3px";
       pill.style.transition = "color 0.3s"; 
       if (i >= 5 - countOfPills) {
         pill.style.color = "gray"; 
@@ -52,3 +52,21 @@ const arrayOfHealthTips = [
       document.getElementById("btn_LoveWishes").style.display = "block"; 
     }
   });
+
+  const images = ["main-img.png", "main-img1.png","main-img3.png"];
+  let currentIndex = 0;
+  const mainImg = document.getElementById("main-img");
+  
+  document.getElementById("left-arrow").addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateImage();
+  });
+
+  document.getElementById("right-arrow").addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateImage();
+  });
+
+  function updateImage() {
+      mainImg.src = "img/gallery/" + images[currentIndex];
+  }
