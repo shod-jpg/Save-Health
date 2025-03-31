@@ -181,4 +181,20 @@ body
     box-shadow: 0 4px 9px rgb(6, 181, 235);
   }
   
-  
+  #p-vitamins {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .vitamin {
+    background: linear-gradient(135deg, #095bf35e, #2a61c9);
+    border: 1px solid rgba(0, 0, 0, 0.493);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow:rgb(0, 204, 255);
+    width: 150px;
+    min-height: 300px;
+    text-align: center;
+  }
+
