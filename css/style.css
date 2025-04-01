@@ -283,3 +283,17 @@ height: 64px;
 .right-arrow:active{
   transform: scale(0.95);
 }
+
+.show-all-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.show-all-button:hover {
+  background-color: #45a049;
+}

@@ -168,4 +168,35 @@ function prevVitamin() {
  // Початковий рендер першого елемента
  renderVitamin(currentIndex);
 
+ function renderAllVitamins() {
+  vitaminsContainer.innerHTML = ""; // Очистити контейнер
+  arrayOfVitamins.forEach((item, index) => {
+    let divVitamin = document.createElement("div");
+    divVitamin.classList.add("vitamin-container");
+    divVitamin.innerHTML = `
+      <div class="vitamin">
+        <h3>${item.title}</h3>
+        <hr>
+        <img src="img/vitamins/${item.photo}" alt="">
+        <p>${item.description}</p>
+        <div>
+          <p>${'💚'.repeat(item.rating) + '🤍'.repeat(5 - item.rating)}</p>
+          <p>${item.type}</p>
+          <p>id:00${item.id}</p>
+        </div>
+      </div>
+    `;
+    vitaminsContainer.appendChild(divVitamin);
+  });
+}
+
+// Додавання кнопки для відкриття всіх карток
+const showAllButton = document.createElement("button");
+showAllButton.textContent = "Показати всі картки Спеціально Для Шатківського";
+showAllButton.classList.add("show-all-button");
+showAllButton.addEventListener("click", renderAllVitamins);
+
+// Додаємо кнопку до документа
+document.body.appendChild(showAllButton);
+
  
