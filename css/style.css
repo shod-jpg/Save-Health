@@ -187,14 +187,99 @@ body
   }
 
   .vitamin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: linear-gradient(135deg, #095bf35e, #2a61c9);
-    border: 1px solid rgba(0, 0, 0, 0.493);
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
+    border: 3px solid rgba(0, 0, 0, 0.493);
+    margin: 35px;
+    padding: 25px;
+    border-radius: 30px;
     box-shadow:rgb(0, 204, 255);
-    width: 150px;
-    min-height: 300px;
+    width: 350px;
+    min-height: 630px;
     text-align: center;
   }
 
+.vitamin p:first-child{
+  align-self: flex-end;
+  width: 100%;
+  border-top: 1px solid rgb(6, 181, 235);
+  border-bottom: 1px solid rgb(6, 235, 235);
+  background-color: #54c4f0cb;
+  font-size: 14px;
+}
+
+.vitamin p:nth-child(2){
+  text-align: center;
+  background-color: #40abf1d7;
+  font-size: 20px;
+  color: #180f0fad;
+  width: 300px;
+}
+
+.vitamin p:last-child{
+text-align: center;
+width: 100%;
+border-top: 1px solid rgb(6, 181, 235);
+border-bottom: 1px solid rgb(6, 235, 235);
+background-color: #548bf0cb;
+font-size: 14px;
+}
+
+.vitamin div{
+  margin-top: auto;
+}
+
+.vitamin img{
+width: 64px;
+height: 64px;
+
+}
+
+.vitamin-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.left-arrow {
+  left: -80px;
+  border-radius: 40px;
+    box-shadow: 0 0 20px rgb(0, 204, 255);
+    width: 75px;
+    height: 75px;
+}
+.right-arrow {
+  right: -80px;
+  border-radius: 40px;
+    box-shadow: 0 0 20px rgb(0, 204, 255);
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+}
+
+.right-arrow:hover{
+  background: linear-gradient(135deg, #095bf35e, #2a61c9);
+    box-shadow: 0 4px 9px rgb(6, 181, 235);
+}
+
+.left-arrow:hover{
+  background: linear-gradient(135deg, #095bf35e, #2a61c9);
+    box-shadow: 0 4px 9px rgb(6, 181, 235);
+}
+
+.left-arrow:active{
+  transform: scale(0.95);
+}
+
+.right-arrow:active{
+  transform: scale(0.95);
+}
