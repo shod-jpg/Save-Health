@@ -187,10 +187,11 @@ body
   }
 
   .vitamin {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(135deg, #095bf35e, #2a61c9);
+    background: linear-gradient(135deg, #0ed6e45e, #0c3279);
     border: 3px solid rgba(0, 0, 0, 0.493);
     margin: 35px;
     padding: 25px;
@@ -199,6 +200,22 @@ body
     width: 350px;
     min-height: 630px;
     text-align: center;
+    transition:  0.3s ;
+    
+  }
+
+  .vitamin:hover {
+    background: linear-gradient(135deg, #3fb1ce5e, #01202c);
+    box-shadow: -15px 7px 40px rgb(8, 37, 167);
+    transform: translate3d(0, 0, 0);
+    margin-left: 10%;
+  }
+
+
+
+
+  .vitamin:hover p:last-child{
+    font-size: 20px;
   }
 
 .vitamin p:first-child{

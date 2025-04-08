@@ -125,7 +125,7 @@ function renderVitamin(index) {
   let divVitamin = document.createElement("div");
   divVitamin.classList.add("vitamin-container");
   divVitamin.innerHTML = `
-    <div class="vitamin">
+    <<div class="vitamin" id="vitamin-card">>
       <h3>${item.title}</h3>
       <hr>
       <img src="img/vitamins/${item.photo}" alt="">
@@ -139,6 +139,8 @@ function renderVitamin(index) {
   `;
   vitaminsContainer.appendChild(divVitamin);
 
+  
+
   //  стрілки
   const leftArrow = document.createElement("img");
   leftArrow.src = "img/left-arrow.png";
@@ -146,12 +148,18 @@ function renderVitamin(index) {
   leftArrow.addEventListener("click", prevVitamin);
   divVitamin.appendChild(leftArrow);
 
+  document.getElementById("vitamin-card").addEventListener("click", () => {
+    nextVitamin();
+  });
+
   const rightArrow = document.createElement("img");
   rightArrow.src = "img/right-arrow.png";
   rightArrow.classList.add("arrow", "right-arrow");
   rightArrow.addEventListener("click", nextVitamin);
   divVitamin.appendChild(rightArrow);
 }
+
+
 
 // Функції для перегортання
 function nextVitamin() {
